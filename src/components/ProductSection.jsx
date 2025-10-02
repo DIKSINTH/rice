@@ -1,5 +1,6 @@
 import React from "react";
-// import { useNavigate } from "react-router-dom"; // for navigation
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion"; // make sure to install framer-motion
 
 const ProductSection = () => {
   const products = [
@@ -52,17 +53,27 @@ const ProductSection = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <div
+          {products.map((product, index) => (
+            <motion.div
               key={product.id}
-              className="bg-white rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col items-start text-left"
+              className="bg-white rounded-2xl shadow-lg p-4 flex flex-col items-start text-left cursor-pointer"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              whileHover={{
+                scale: 1.05,
+                rotate: 1,
+                boxShadow: "0 15px 25px rgba(0,0,0,0.2)",
+              }}
             >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-semibold text-gray-800">
+              <div className="overflow-hidden rounded-lg w-full">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mt-4">
                 {product.name}
               </h3>
               <p className="text-gray-500 text-sm mb-1">{product.category}</p>
@@ -70,18 +81,20 @@ const ProductSection = () => {
               <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
                 {product.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* View More Button */}
         <div className="mt-10">
-          <button
+          <motion.button
             // onClick={() => navigate("/products")}
-            className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition"
+            className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition-transform transform hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             View More
-          </button>
+          </motion.button>
         </div>
       </div>
     </section>
