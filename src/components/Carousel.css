@@ -33,18 +33,26 @@ body {
   --item5-opacity: 0;
 }
 
+/* Header Base */
 header {
   width: 1140px;
   max-width: 90%;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  height: 50px;
+  height: 60px; /* Consistent height for mobile top calculation */
   align-items: center;
+  position: relative;
+  z-index: 200;
 }
 
 header .logo {
   font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header nav {
+  display: flex;
 }
 
 header nav a {
@@ -52,6 +60,78 @@ header nav a {
   text-decoration: none;
   color: #555;
   font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #000;
+}
+
+/* Mobile (hamburger menu) - Default hidden state */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* -------- Responsive Header Fix (Tablet & Mobile) -------- */
+
+@media screen and (max-width: 991px) {
+  /* Fix: Ensure logo and hamburger are side-by-side, and nav is HIDDEN by default */
+  header {
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Show the hamburger icon on tablets/mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* IMPORTANT: Hide the navigation on tablets/mobile by default */
+  header nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Position right below the header bar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    box-sizing: border-box; /* Include padding/border in the element's total width and height */
+  }
+
+  /* When 'active' class is toggled, display the menu */
+  header nav.active {
+    display: flex;
+  }
+
+  /* Align links correctly in the mobile menu */
+  header nav a {
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 /* carousel */
@@ -459,7 +539,8 @@ header nav a {
 }
 
 @media screen and (max-width: 991px) {
-  /* ipad, tablets */
+  /* ipad, tablets (Header styles moved up for clarity and consistency) */
+
   .carousel .list .item {
     width: 90%;
   }
@@ -474,7 +555,7 @@ header nav a {
 }
 
 @media screen and (max-width: 767px) {
-  /* mobile */
+  /* mobile (No need to redefine header/nav styles, they inherit from 991px block) */
   .carousel {
     height: 600px;
   }
@@ -511,101 +592,5 @@ header nav a {
     display: flex;
     width: max-content;
     float: right;
-  }
-}
-
-/* Header Base */
-header {
-  width: 1140px;
-  max-width: 90%;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  height: 60px;
-  align-items: center;
-  position: relative;
-  z-index: 200;
-}
-
-header .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-header nav {
-  display: flex;
-}
-
-header nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: #000;
-}
-
-/* -------- Responsive Header -------- */
-@media screen and (max-width: 991px) {
-  header {
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 0;
-  }
-
-  header .logo {
-    font-size: 1.4rem;
-  }
-}
-
-/* Mobile (hamburger menu) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: #333;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-/* mobile nav hidden by default */
-@media screen and (max-width: 767px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 15px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  header nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  header nav a {
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-
-  /* When active */
-  header nav.active {
-    display: flex;
   }
 }
