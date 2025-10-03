@@ -1,8 +1,10 @@
 import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"; // make sure to install framer-motion
+import { useNavigate } from "react-router-dom";
 
 const ProductSection = () => {
+  const navigate = useNavigate();
   const products = [
     {
       id: 1,
@@ -88,7 +90,7 @@ const ProductSection = () => {
         {/* View More Button */}
         <div className="mt-10">
           <motion.button
-            // onClick={() => navigate("/products")}
+            onClick={() => navigate("/products")}
             className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition-transform transform hover:scale-105"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

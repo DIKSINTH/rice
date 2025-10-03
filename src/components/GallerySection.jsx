@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const GallerySection = () => {
+  const navigate = useNavigate();
   const images = [
     "https://images.pexels.com/photos/7156888/pexels-photo-7156888.jpeg",
     "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg",
@@ -70,6 +72,7 @@ const GallerySection = () => {
         {/* View More Button */}
         <div className="mt-10">
           <motion.button
+            onClick={() => navigate("/gallery")}
             className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition-transform"
             whileHover={{
               scale: 1.05,
