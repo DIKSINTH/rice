@@ -20,11 +20,11 @@ const Header = () => {
 
       {/* Nav links */}
       <nav className={isOpen ? "active" : ""}>
-        <a href="">Home</a>
-        <a href="">About Us</a>
-        <a href="">Products</a>
-        <a href="">Gallery</a>
-        <a href="">Contact Us</a>
+        <a href="/">Home</a>
+        <a href="/aboutus">About Us</a>
+        <a href="/products">Products</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contactus">Contact Us</a>
       </nav>
     </header>
   );

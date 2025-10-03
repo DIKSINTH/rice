@@ -17,7 +17,7 @@ const AboutUs = () => {
           <motion.img
             src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="About Us"
-            className="rounded-2xl shadow-lg w-full h-auto object-cover cursor-pointer"
+            className="rounded-2xl shadow-lg object-cover cursor-pointer max-w-md w-full max-h-[500px]"
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.5 }}
           />
@@ -48,17 +48,8 @@ const AboutUs = () => {
             We are a team of passionate creators dedicated to building digital
             experiences that matter. Our mission is to deliver meaningful and
             impactful solutions for businesses and individuals worldwide. Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Consequatur
-            veniam est at excepturi eum, officiis officia aspernatur quo sequi
-            amet, inventore quia. Alias neque ab nihil tempora fugit quidem
-            dolorem. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Unde velit minus corrupti corporis provident exercitationem, sint
-            officia fugiat nulla quod, nemo perferendis eum sit tenetur vel.
-            Quaerat accusantium neque delectus. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Vel, ab ducimus consequuntur dolorem
-            rem, libero velit at fugit est asperiores debitis? Iste error,
-            placeat provident quos cum earum quisquam eveniet voluptatum modi
-            dignissimos iure! Doloribus deleniti itaque veritatis sunt dolor.
+            ipsum, dolor sit amet consectetur adipisicing elit. Vero sint rerum
+            a aliquam, reiciendis laborum accusamus eos ex quidem harum!
           </motion.p>
           <motion.p
             className="text-gray-100 leading-relaxed mb-4"
@@ -68,14 +59,10 @@ const AboutUs = () => {
           >
             With a focus on innovation, collaboration, and creativity, we strive
             to push the boundaries of what’s possible in technology and design.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
-            voluptates doloremque perspiciatis, sit mollitia similique sint
-            autem! Eius, ratione reprehenderit ullam, sunt a error esse
-            molestias pariatur dolores aliquam repellendus tempora minima, sit
-            voluptatem expedita veritatis voluptatum non. Iste, quasi! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Corporis minima
-            animi alias ullam architecto exercitationem magni rem aut at
-            excepturi?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. excepturi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            dolores, quisquam consectetur et placeat culpa earum eius voluptates
+            quaerat libero!
           </motion.p>
           <motion.p
             className="text-gray-100 leading-relaxed"
@@ -85,12 +72,11 @@ const AboutUs = () => {
           >
             From small startups to large enterprises, we believe in creating
             value-driven solutions that inspire growth and success. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Expedita sit quod
-            obcaecati cum omnis qui, sint necessitatibus iure beatae illo
-            quisquam! Dolorum sunt voluptatem, provident harum error commodi
-            exercitationem aperiam qui quisquam reiciendis rem enim officia
-            voluptatibus dolores necessitatibus facilis perferendis quos magni
-            ea vel hic magnam iure earum. Nisi.
+            dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Porro, mollitia. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Nesciunt nihil sapiente
+            quo atque voluptates animi amet, exercitationem quibusdam dolore
+            iste.
           </motion.p>
         </motion.div>
       </div>

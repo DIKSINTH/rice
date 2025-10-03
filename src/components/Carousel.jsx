@@ -4,7 +4,6 @@ import img1 from "../assets/images/img1.png";
 import img2 from "../assets/images/img2.png";
 import img3 from "../assets/images/img3.png";
 import img4 from "../assets/images/img4.png";
-import Header from "./Header.jsx";
 
 const Carousel = () => {
   const carouselRef = useRef(null);
@@ -59,7 +58,6 @@ const Carousel = () => {
 
   return (
     <>
-      <Header />
       <div ref={carouselRef} className="carousel">
         <div className="list" ref={listRef}>
           <div className="item">

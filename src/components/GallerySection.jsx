@@ -21,7 +21,7 @@ const GallerySection = () => {
     "https://images.pexels.com/photos/7156873/pexels-photo-7156873.jpeg",
     "https://images.pexels.com/photos/7156872/pexels-photo-7156872.jpeg",
     "https://images.pexels.com/photos/7156871/pexels-photo-7156871.jpeg",
-    "https://images.pexels.com/photos/7156870/pexels-photo-7156870.jpeg",
+    // "https://images.pexels.com/photos/7156870/pexels-photo-7156870.jpeg",
   ];
 
   return (
@@ -35,7 +35,7 @@ const GallerySection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Gallery
+          Our Gallery
         </motion.h2>
 
         {/* Gallery Grid */}
